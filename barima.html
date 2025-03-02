@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krakue's Tech World</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: #0a0a0a;
+            color: #00ffcc;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(90deg, #001f3f, #003366);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: white;
+        }
+        .container {
+            padding: 50px;
+        }
+        .contact-form {
+            background: #1a1a1a;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #00ffcc;
+            border-radius: 5px;
+            background: black;
+            color: white;
+        }
+        button {
+            background: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #00ffcc;
+            color: black;
+        }
+        .animated {
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+            }
+            to {
+                text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="animated">Krakue's Tech World</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="container">
+    <h2>Welcome to My World of Technology</h2>
+    <p>Explore the world of computer engineering, innovation, and passion.</p>
+</section>
+
+<section id="about" class="container">
+    <h2>About Me</h2>
+    <p>Hi, I'm <strong>Krakue Barima Wiabo</strong>. I'm 17 years old, born on October 14, 2007.  
+       I studied at <strong>St. Augustine's College</strong> in Cape Coast, the best in West Africa.  
+       Currently, I study <strong>Computer Science</strong> at <strong>Kwame Nkrumah University of Science and Technology</strong> in Kumasi.  
+       I chose this path because of my passion for becoming a <strong>tech genius</strong> and my dream to be a <strong>computer engineer</strong>.</p>
+</section>
+
+<section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+</section>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("responseMessage").innerText = "Thank you for reaching out!";
+    });
+</script>
+
+</body>
+</html>
